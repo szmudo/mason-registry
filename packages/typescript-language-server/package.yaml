@@ -1,7 +1,7 @@
 ---
 name: typescript-language-server
 description: TypeScript & JavaScript Language Server.
-homepage: https://github.com/typescript-language-server/typescript-language-server
+homepage: https://github.com/szmudo/typescript-language-server
 licenses:
   - MIT
 languages:
@@ -11,7 +11,7 @@ categories:
   - LSP
 
 source:
-  id: pkg:npm/typescript-language-server@~/SAPDevelop/git/szmudo/typescript-language-server
+  id: pkg:npm/typescript-language-server@szmudo/typescript-language-server
   extra_packages:
     - typescript
 
