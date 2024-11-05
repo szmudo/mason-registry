@@ -11,12 +11,17 @@ categories:
   - LSP
 
 source:
-  id: pkg:npm/typescript-language-server@szmudo/typescript-language-server
-  extra_packages:
-    - typescript
+  id: pkg:github/szmudo/typescript-language-server
+  build:
+    staged: true
+    run: |
+      npm --quiet ci --no-audit --no-fund
+      npm --quiet run build
+      npm --quiet prune --omit=dev
+      npm --quiet install --omit=dev --no-audit --no-fund typescript
 
 schemas:
   lsp: vscode:https://raw.githubusercontent.com/microsoft/vscode/main/extensions/typescript-language-features/package.json
 
 bin:
-  typescript-language-server: npm:typescript-language-server
+  typescript-language-server: node:lib/cli.mjs
