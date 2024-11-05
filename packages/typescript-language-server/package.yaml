@@ -17,8 +17,7 @@ source:
     run: |
       npm --quiet ci --no-audit --no-fund
       npm --quiet run build
-      npm --quiet prune --omit=dev
-      npm --quiet install --omit=dev --no-audit --no-fund typescript
+      npm --quiet install typescript --no-save --no-audit --no-fund
 
 schemas:
   lsp: vscode:https://raw.githubusercontent.com/microsoft/vscode/main/extensions/typescript-language-features/package.json
