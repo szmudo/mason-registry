@@ -24,3 +24,6 @@ schemas:
 
 bin:
   typescript-language-server: node:lib/cli.mjs
+
+neovim:
+  lspconfig: ts_ls
